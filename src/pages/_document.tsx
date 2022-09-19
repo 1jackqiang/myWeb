@@ -11,7 +11,11 @@ class MyDocument extends Document {
 		return (
 			<Html>
 				<Head>
-					<link rel="icon" href="/favicon.png" />
+					<meta charSet="utf-8" />
+					<meta name="applicable-device" content="pc,mobile" />
+					<meta httpEquiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+					<meta name="renderer" content="webkit" />
+					<link rel="icon" type="image/png" href="/favicon.png" />
 				</Head>
 				<body>
 					<Main />

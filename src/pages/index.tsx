@@ -1,16 +1,14 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import Layout from '@/components/Layout';
 
 const Home: NextPage = () => {
 	return (
-		<div className={styles.container}>
+		<div>
 			<Head>
-				<title>易搭云</title>
+				<title>首页</title>
 			</Head>
-
-			<div>hello</div>
+			<Layout>hellod11</Layout>
 		</div>
 	);
 };
