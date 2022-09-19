@@ -8,7 +8,7 @@ const Home: NextPage = () => {
 			<Head>
 				<title>首页</title>
 			</Head>
-			<Layout>hellod11</Layout>
+			<Layout>首页</Layout>
 		</div>
 	);
 };
