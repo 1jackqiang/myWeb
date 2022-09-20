@@ -1,13 +1,10 @@
-.eb-header {
-  height: 140px;
+@media screen and (max-width: 768px){
+  .eb-header {
+    height: 4.38rem;
 
-  &-logo img {
-    width: 176px;
-    height: 60px;
+    &-logo img {
+      width: 5.5rem;
+      height: 1.88rem;
+    }
   }
-}
-
-
-span {
-  color: red;
 }
