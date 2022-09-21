@@ -1,9 +1,6 @@
-import { Popover, Transition, Menu } from '@headlessui/react';
-import Link from 'next/link';
+import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
+import { Popover, Transition } from '@headlessui/react';
 import React, { Fragment } from 'react';
-import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
-
-import { IconFont } from '@/components/IconFont';
 
 const navigation = [
   {
@@ -56,7 +53,7 @@ const NavHeader: React.FC = () => {
                   className="absolute inset-0 bottom-auto top-20 origin-top transform list-none bg-white transition-all"
                 >
                   {navigation.map(({ title, href }) => (
-                    <li>
+                    <li key={href}>
                       <a
                         href={href}
                         className="block rounded-md border-b-2 border-gray-100 py-2 px-5 text-base font-normal"
