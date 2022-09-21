@@ -1,7 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import HomePage from '@/containers/home';
 
-import Layout from '@/components/Layout';
+import Layout from '@/components/layout';
 
 const Home: NextPage = () => {
   return (
@@ -9,7 +10,9 @@ const Home: NextPage = () => {
       <Head>
         <title>首页</title>
       </Head>
-      <Layout>首页</Layout>
+      <Layout>
+				<HomePage />
+			</Layout>
     </div>
   );
 };

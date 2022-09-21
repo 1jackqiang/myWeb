@@ -1,5 +1,5 @@
 import React from 'react';
-import NavHeader from '../NavHeader';
+import NavHeader from '../nav-header';
 
 const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
 	return (
