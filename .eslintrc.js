@@ -19,6 +19,7 @@ module.exports = {
     'no-unused-vars': 0,
     'react/no-unescaped-entities': 0,
     '@next/next/no-img-element': 0,
+    '@next/next/no-html-link-for-pages': 0,
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
     'import/first': 'error',

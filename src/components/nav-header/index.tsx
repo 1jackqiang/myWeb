@@ -15,58 +15,68 @@ const navigation = [
 
 const NavHeader: React.FC = () => {
   return (
-    <header className="fixed z-50 flex w-full items-center justify-between px-4 py-5 md:justify-start">
-      <a href="#">
-        <img src="/images/logo.png" alt="" className="h-7 w-20" />
-      </a>
-      <div className="flex items-center justify-end gap-2.5">
-        <a
-          href="#"
-          className="whitespace-nowrap text-base font-light text-black"
-        >
-          登录
+    <header className="bg-transparent">
+      <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+        <a className="block text-teal-600" href="/">
+          <span className="sr-only">Home</span>
+          <img
+            src="/images/logo.png"
+            alt=""
+            className="h-7 w-20 object-cover"
+          />
         </a>
-        <a
-          href="#"
-          className="whitespace-nowrap rounded border-2 border-blue-500 px-4 py-2 text-base font-light leading-4 text-blue-500"
-        >
-          注册
-        </a>
-        <Popover>
-          {({ open }) => (
-            <>
-              <Popover.Button className="flex h-7 w-7 items-center justify-center outline-none">
-                <span className="sr-only">Close menu</span>
-                {open ? <CloseOutlined /> : <MenuOutlined />}
-              </Popover.Button>
-              <Transition
-                as={Fragment}
-                enter="duration-300 ease-out-in transform transition oveflow-hidden"
-                enterFrom="max-h-0 opacity-0"
-                enterTo="max-h-screen opacity"
-                leave="duration-300 ease-in-out"
-                leaveFrom="max-h-screen opacity-100"
-                leaveTo="max-h-0 opacity-0"
+        <div className="flex flex-1 items-center justify-end md:justify-between">
+          <nav className="hidden md:block" aria-labelledby="header-navigation">
+            <h2 className="sr-only" id="header-navigation">
+              Header navigation
+            </h2>
+            <ul className="flex items-center gap-6 text-sm">
+              {navigation.map((item) => (
+                <li key={item.href}>
+                  <a
+                    className="text-gray-500 transition hover:text-gray-500/75"
+                    href={item.href}
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className="flex items-center gap-2">
+            <div className="flex gap-2">
+              <a
+                className="block rounded-md px-5 py-2.5 text-sm font-medium text-black transition hover:bg-gray-100"
+                href="/#"
               >
-                <Popover.Panel
-                  as="nav"
-                  className="absolute inset-0 bottom-auto top-20 origin-top transform list-none bg-white transition-all"
-                >
-                  {navigation.map(({ title, href }) => (
-                    <li key={href}>
-                      <a
-                        href={href}
-                        className="block rounded-md border-b-2 border-gray-100 py-2 px-5 text-base font-normal"
-                      >
-                        {title}
-                      </a>
-                    </li>
-                  ))}
-                </Popover.Panel>
-              </Transition>
-            </>
-          )}
-        </Popover>
+                登录
+              </a>
+              <a
+                className="rounded-md border border-blue-500 bg-gray-100 bg-transparent px-5 py-2.5 text-sm font-medium text-blue-500 transition"
+                href="/#"
+              >
+                注册
+              </a>
+            </div>
+            <button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
+              <span className="sr-only">Toggle menu</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </header>
   );

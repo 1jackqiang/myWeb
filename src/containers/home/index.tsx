@@ -4,6 +4,7 @@ import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
 
 import { IconFont } from '@/components/IconFont';
+import Banner from '@/containers/home/banner';
 
 const Home = () => {
   return (
@@ -11,16 +12,16 @@ const Home = () => {
       <div className="z-0 h-screen w-full">
         <section className="absolute inset-0 top-32 z-20 mx-auto text-center">
           <Fade bottom>
-            <h1 className="text-3xl first-letter:text-blue-500">
+            <h1 className="text-3xl font-bold first-letter:text-blue-500">
               零代码，易搭云
             </h1>
           </Fade>
           <Fade bottom delay={300}>
-            <h3 className="text-sm">轻松搭建企业个性化系统</h3>
+            <h3 className="text-sm text-gray-500">轻松搭建企业个性化系统</h3>
           </Fade>
           <Fade delay={600}>
             <a
-              className="mt-5 inline-flex items-center rounded-sm border-2 border-blue-500 bg-white px-5 py-2 text-xs font-normal text-blue-500"
+              className="mt-5 inline-flex items-center rounded-sm border border-blue-500 bg-white px-5 py-2 text-xs font-normal text-blue-500"
               href="#"
             >
               <span className="mr-3">开始创建</span>
@@ -72,7 +73,7 @@ const Home = () => {
         <aside className="relative md:flex-grow">
           <figure className="h-[14rem] w-full px-6">
             <img
-              className="-full mx-auto w-full pb-5"
+              className="mx-auto h-full w-full pb-5"
               src="/images/application.gif"
               alt=""
             />
@@ -92,6 +93,26 @@ const Home = () => {
             />
           </div>
         </aside>
+      </div>
+      <div className="relative h-[15rem] w-full">
+        <img
+          className="h-full w-full object-cover"
+          src="/images/more@2x.png"
+          alt="more"
+        />
+        <div className="absolute inset-0 m-auto flex flex-col items-center justify-center">
+          <h1 className="text-center text-2xl font-bold text-black">
+            <img
+              className="mr-3 inline-block h-7 w-7"
+              src="/images/brand@2x.png"
+              alt=""
+            />
+            更多的奇妙想法正在实现
+          </h1>
+          <a className="text-sm font-bold" href="#">
+            立即体验 →
+          </a>
+        </div>
       </div>
     </>
   );
