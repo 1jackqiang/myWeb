@@ -1,10 +1,10 @@
+import Image from 'next/image';
 // @ts-ignore
 import Fade from 'react-reveal/Fade';
 // @ts-ignore
 import Slide from 'react-reveal/Slide';
 
 import { IconFont } from '@/components/IconFont';
-import Banner from '@/containers/home/banner';
 
 const Home = () => {
   return (
@@ -30,11 +30,11 @@ const Home = () => {
           </Fade>
         </section>
         <figure className="eb-home-background-first z-10" />
-        <img
+        {/*<img
           className="eb-home-application absolute bottom-10 left-0 right-0 mx-auto"
           src="/images/application.gif"
           alt=""
-        />
+        />*/}
       </div>
       <div className="flex w-full flex-col gap-8 md:h-[730px] md:flex-row md:items-center md:justify-center">
         <section className="mt-10 px-6 md:mt-0 md:flex-shrink-0">
@@ -70,19 +70,35 @@ const Home = () => {
             <IconFont type="icon-enter" />
           </a>
         </section>
-        <aside className="relative md:flex-grow">
-          <figure className="h-[14rem] w-full px-6">
-            <img
-              className="mx-auto h-full w-full pb-5"
-              src="/images/application.gif"
-              alt=""
-            />
+        <aside className="relative mb-8 md:flex-grow">
+          <figure className="relative w-full px-6 pb-5">
+            <video
+              className="video-container hidden md:block"
+              autoPlay
+              loop
+              preload="auto"
+              muted
+              playsInline
+            >
+              <source src="/video/homde-section1.mp4" type="video/mp4" />
+            </video>
+            <div className="relative md:hidden">
+              <img
+                className="mx-auto h-auto px-2.5 py-2.5 md:hidden"
+                src="/gif/home-section1.gif"
+              />
+              <img
+                className="absolute inset-0 h-full w-full"
+                src="/images/video-wrap-small.png"
+                alt=""
+              />
+            </div>
           </figure>
           <div className="absolute bottom-0 right-0 -z-10">
             <img
               src="images/circle@2x.png"
               alt=""
-              className="h-[9rem] w-[9rem]"
+              className="ml-auto h-1/3 w-1/3"
             />
           </div>
           <div className="absolute bottom-0 left-14 h-[3.5rem] w-[3rem]">
@@ -94,12 +110,20 @@ const Home = () => {
           </div>
         </aside>
       </div>
-      <div className="relative h-[15rem] w-full">
-        <img
-          className="h-full w-full object-cover"
-          src="/images/more@2x.png"
-          alt="more"
-        />
+      <div className="relative w-full">
+        <picture>
+          <source media="(max-width: 750px)" srcSet="/images/more-small.jpg" />
+          <source
+            media="(max-width: 1280px)"
+            srcSet="/images/more-medium.jpg"
+          />
+          <img
+            className="h-[270px] w-full object-cover md:h-auto lg:h-auto"
+            src="/images/more-large.jpg"
+            alt="more"
+            loading="lazy"
+          />
+        </picture>
         <div className="absolute inset-0 m-auto flex flex-col items-center justify-center">
           <h1 className="text-center text-2xl font-bold text-black">
             <img
