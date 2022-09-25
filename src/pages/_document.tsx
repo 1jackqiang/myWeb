@@ -16,6 +16,7 @@ class MyDocument extends Document {
           <meta httpEquiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
           <meta name="renderer" content="webkit" />
           <link rel="icon" type="image/png" href="/images/favicon.png" />
+          <script src="/lib-flexible.js" async />
         </Head>
         <body>
           <Main />

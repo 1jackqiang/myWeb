@@ -36,7 +36,7 @@ const Home = () => {
           alt=""
         />*/}
       </div>
-      <div className="flex w-full flex-col gap-8 md:h-[730px] md:flex-row md:items-center md:justify-center">
+      <div className="section-app flex w-full flex-col gap-8 md:h-[730px] md:flex-row md:items-center md:justify-center">
         <section className="mt-10 px-6 md:mt-0 md:flex-shrink-0">
           <Slide left big={false}>
             <h1 className="mb-0 text-3xl font-normal first-letter:px-5 first-line:text-blue-500 md:text-4xl md:first-letter:px-6">
@@ -110,7 +110,7 @@ const Home = () => {
           </div>
         </aside>
       </div>
-      <div className="relative w-full">
+      <div className="section-more relative w-full">
         <picture>
           <source media="(max-width: 750px)" srcSet="/images/more-small.jpg" />
           <source
@@ -118,22 +118,18 @@ const Home = () => {
             srcSet="/images/more-medium.jpg"
           />
           <img
-            className="h-[270px] w-full object-cover md:h-auto lg:h-auto"
+            className="section-more-img"
             src="/images/more-large.jpg"
             alt="more"
             loading="lazy"
           />
         </picture>
-        <div className="absolute inset-0 m-auto flex flex-col items-center justify-center">
-          <h1 className="text-center text-2xl font-bold text-black">
-            <img
-              className="mr-3 inline-block h-7 w-7"
-              src="/images/brand@2x.png"
-              alt=""
-            />
+        <div className="section-more-content">
+          <h1>
+            <img src="/images/brand@2x.png" alt="" />
             更多的奇妙想法正在实现
           </h1>
-          <a className="text-sm font-bold" href="#">
+          <a className="section-more-link" href="#">
             立即体验 →
           </a>
         </div>
