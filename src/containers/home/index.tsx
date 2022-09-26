@@ -91,7 +91,7 @@ const Home = () => {
               alt=""
             />
           </div>
-          <div className="section-app-content-circle">
+          <div className="section-app-content-background">
             <img src="images/circle@2x.png" alt="" />
           </div>
           <div className="section-app-content-arrow">
@@ -164,11 +164,8 @@ const Home = () => {
               alt=""
             />
           </div>
-          <div className="section-app-content-circle">
-            <img src="images/circle@2x.png" alt="" />
-          </div>
-          <div className="section-app-content-arrow">
-            <img src="images/arrow@2x.png" alt="" />
+          <div className="section-app-content-background section-app-content-background-topleft">
+            <img src="images/triangle-medium.png" alt="" />
           </div>
         </div>
       </div>
@@ -238,11 +235,8 @@ const Home = () => {
               alt=""
             />
           </div>
-          <div className="section-app-content-circle">
-            <img src="images/circle@2x.png" alt="" />
-          </div>
-          <div className="section-app-content-arrow">
-            <img src="images/arrow@2x.png" alt="" />
+          <div className="section-app-content-background">
+            <img src="images/rect-medium.png" alt="" />
           </div>
         </div>
       </div>
@@ -311,11 +305,8 @@ const Home = () => {
               alt=""
             />
           </div>
-          <div className="section-app-content-circle">
-            <img src="images/circle@2x.png" alt="" />
-          </div>
-          <div className="section-app-content-arrow">
-            <img src="images/arrow@2x.png" alt="" />
+          <div className="section-app-content-background section-app-content-background-leftbottom">
+            <img src="images/bulb-medium.png" alt="" />
           </div>
         </div>
       </div>
@@ -330,19 +321,16 @@ const Home = () => {
             srcSet="/images/template-medium.jpg"
           />
           <img
-            className="section-more-img"
-            src="/images/template-medium.jpg"
+            className="section-template-background"
+            src="/images/template-large.jpg"
             alt="more"
             loading="lazy"
           />
         </picture>
-        <div className="section-more-content">
-          <h1>
-            <img src="/images/brand@2x.png" alt="" />
-            更多的奇妙想法正在实现
-          </h1>
-          <a className="section-more-link" href="#">
-            立即体验 →
+        <div className="section-template-content">
+          <h1>丰富模板，懂你所需</h1>
+          <a className="section-template-link" href="#">
+            一键启用
           </a>
         </div>
       </div>

@@ -11,4 +11,5 @@ ul {
 
 picture {
   font-size: 0;
+  display: block;
 }

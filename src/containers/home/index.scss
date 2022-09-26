@@ -164,7 +164,7 @@
       display: none;
     }
 
-    &-circle {
+    &-background {
       position: absolute;
       right: 0;
       bottom: 0;
@@ -301,7 +301,7 @@
         }
       }
 
-      &-circle {
+      &-background {
         width: 3.99rem;
         height: 3.99rem;
         position: absolute;
@@ -314,6 +314,16 @@
           width: 100%;
           object-fit: cover;
         }
+      }
+
+      &-background-topleft {
+        top: -0.29rem;
+        left: -0.68rem;
+      }
+
+      &-background-leftbottom {
+        left: -0.68rem;
+        bottom: 0;
       }
 
       &-arrow {
@@ -358,7 +368,7 @@
 
   h1 {
     text-align: center;
-    font-size: 48px;
+    font-size: 30px;
     font-weight: bold;
 
     img {
@@ -380,8 +390,8 @@
   .section-more {
     h1 {
       text-align: center;
-      font-size: 0.74rem;
-      font-weight: bold;
+      font-size: 0.48rem;
+      font-weight: 400;
 
       img {
         width: 0.79rem;
@@ -396,6 +406,67 @@
       font-weight: bold;
       font-size: 0.34rem !important;
       margin-top: 0.43rem;
+    }
+  }
+}
+
+.section-template {
+  position: relative;
+
+  &-background {
+    height: auto;
+    min-width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  &-content {
+    position: absolute;
+    left: 120px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+  }
+
+  h1 {
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  &-link {
+    padding: 18px 66px;
+    font-weight: 300;
+    font-size: 16px;
+    background: white;
+    color: black;
+    border-radius: 6px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-template {
+    &-content {
+      left: 0.8rem;
+    }
+
+    h1 {
+      font-size: 0.48rem;
+      font-weight: 400;
+    }
+
+    &-link {
+      padding: 0.25rem 0.52rem;
+      font-weight: 300;
+      font-size: 0.37rem;
+      background: white;
+      color: black;
+      border-radius: 0.08rem;
     }
   }
 }
