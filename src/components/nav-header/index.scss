@@ -30,21 +30,28 @@
   }
 
   &-content-dropmenu {
-    height: 100vh;
     width: 100%;
     position: fixed;
-    top: 60px;
+    top: 1.87rem;
     left: 0;
     right: 0;
-    bottom: 0;
     background: #fff;
-    overflow: auto;
     z-index: 100;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: 1px 1px 12px 0 rgb(229 240 255 / 70%);
+
+    &-collapsed {
+      max-height: 100vh;
+    }
 
     &-nav {
-
       &-item {
-
+        color: black;
+        font-size: 0.43rem;
+        font-weight: 400;
+        padding: 0.45rem 0.39rem;
       }
     }
   }
@@ -75,7 +82,7 @@
     &-menu {
       background: none;
       outline: none;
-      padding: 0;
+      padding: 0 0.1rem;
       border: none;
       color: inherit;
 

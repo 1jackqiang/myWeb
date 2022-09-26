@@ -1,3 +1,4 @@
+import cls from 'classnames';
 import React, { useEffect, useRef, useState } from 'react';
 
 const navigation = [
@@ -57,7 +58,11 @@ const NavHeader = () => {
           ))}
         </ul>
       </div>
-      <div className="header-content-dropmenu">
+      <div
+        className={cls('header-content-dropmenu', {
+          'header-content-dropmenu-collapsed': collapsed,
+        })}
+      >
         <ul className="header-content-dropmenu-nav">
           {navigation.map((item) => (
             <li key={item.href} className="header-content-dropmenu-nav-item">
@@ -79,11 +84,11 @@ const NavHeader = () => {
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            stroke-width="2"
+            strokeWidth="1"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>

@@ -319,6 +319,33 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="section-template">
+        <picture>
+          <source
+            media="(max-width: 750px)"
+            srcSet="/images/template-small.jpg"
+          />
+          <source
+            media="(max-width: 1280px)"
+            srcSet="/images/template-medium.jpg"
+          />
+          <img
+            className="section-more-img"
+            src="/images/template-medium.jpg"
+            alt="more"
+            loading="lazy"
+          />
+        </picture>
+        <div className="section-more-content">
+          <h1>
+            <img src="/images/brand@2x.png" alt="" />
+            更多的奇妙想法正在实现
+          </h1>
+          <a className="section-more-link" href="#">
+            立即体验 →
+          </a>
+        </div>
+      </div>
       <div className="section-more">
         <picture>
           <source media="(max-width: 750px)" srcSet="/images/more-small.jpg" />
