@@ -9,108 +9,317 @@ import { IconFont } from '@/components/IconFont';
 const Home = () => {
   return (
     <>
-      <div className="z-0 h-screen w-full">
-        <section className="absolute inset-0 top-32 z-20 mx-auto text-center">
+      <div className="home-banner z-0 h-screen w-full">
+        <div className="home-banner-content">
           <Fade bottom>
-            <h1 className="text-3xl font-bold first-letter:text-blue-500">
-              零代码，易搭云
-            </h1>
+            <h1 className="home-banner-content-title">零代码，易搭云</h1>
           </Fade>
           <Fade bottom delay={300}>
-            <h3 className="text-sm text-gray-500">轻松搭建企业个性化系统</h3>
+            <h3 className="home-banner-content-desc">轻松搭建企业个性化系统</h3>
           </Fade>
           <Fade delay={600}>
-            <a
-              className="mt-5 inline-flex items-center rounded-sm border border-blue-500 bg-white px-5 py-2 text-xs font-normal text-blue-500"
-              href="#"
-            >
-              <span className="mr-3">开始创建</span>
+            <a className="home-banner-content-link" href="#">
+              <span>开始创建</span>
               <IconFont type="icon-enter" />
             </a>
           </Fade>
-        </section>
-        <figure className="eb-home-background-first z-10" />
-        {/*<img
-          className="eb-home-application absolute bottom-10 left-0 right-0 mx-auto"
-          src="/images/application.gif"
-          alt=""
-        />*/}
+        </div>
       </div>
-      <div className="section-app flex w-full flex-col gap-8 md:h-[730px] md:flex-row md:items-center md:justify-center">
-        <section className="mt-10 px-6 md:mt-0 md:flex-shrink-0">
-          <Slide left big={false}>
-            <h1 className="mb-0 text-3xl font-normal first-letter:px-5 first-line:text-blue-500 md:text-4xl md:first-letter:px-6">
-              “零”基础小白
-            </h1>
-            <h1 className="mt-0 mb-3 text-3xl font-normal md:text-4xl">
-              也能搭建业务应用
-            </h1>
-          </Slide>
+      <div className="section-app">
+        <div className="section-app-aside">
+          <div className="section-app-aside-caption">
+            <Slide left>
+              <h1>
+                <span className="section-app-aside-caption-highlight">
+                  “零”
+                </span>
+                基础小白
+                <br />
+                也能搭建业务应用
+              </h1>
+            </Slide>
+          </div>
           <Slide right cascade big={false} delay={100}>
-            <ul className="md:mt-8">
-              <li className="mb-3 flex items-start justify-start gap-3 md:mb-6">
-                <IconFont type="icon-checked" className="leading-4" />
+            <ul className="section-app-aside-desc">
+              <li>
+                <IconFont
+                  className="section-app-aside-desc-icon"
+                  type="icon-checked"
+                />
                 <p className="text-sm font-light">
                   丰富的字段类型，拖拉拽的操作方式
                 </p>
               </li>
-              <li className="flex items-start justify-start gap-3">
-                <IconFont type="icon-checked" className="leading-4" />
+              <li>
+                <IconFont
+                  className="section-app-aside-desc-icon"
+                  type="icon-checked"
+                />
                 <p className="text-sm font-light">
                   丰富的字段类型，拖拉拽的操作方式
                 </p>
               </li>
             </ul>
           </Slide>
-          <a
-            className="mt-5 inline-flex items-center rounded-sm border-2 border-blue-500 bg-blue-500 px-5 py-2 text-xs font-normal text-white"
-            href="#"
-          >
+          <a className="section-app-aside-link" href="#">
             <span className="mr-3">即刻体验</span>
-            <IconFont type="icon-enter" />
+            <IconFont
+              className="section-app-aside-link-icon"
+              type="icon-enter"
+            />
           </a>
-        </section>
-        <aside className="relative mb-8 md:flex-grow">
-          <figure className="relative w-full px-6 pb-5">
-            <video
-              className="video-container hidden md:block"
-              autoPlay
-              loop
-              preload="auto"
-              muted
-              playsInline
-            >
-              <source src="/video/homde-section1.mp4" type="video/mp4" />
+        </div>
+        <div className="section-app-content">
+          <div className="section-app-content-video">
+            <video autoPlay loop preload="auto" muted playsInline>
+              <source src="/video/home-app.mp4" type="video/mp4" />
             </video>
-            <div className="relative md:hidden">
-              <img
-                className="mx-auto h-auto px-2.5 py-2.5 md:hidden"
-                src="/gif/home-section1.gif"
-              />
-              <img
-                className="absolute inset-0 h-full w-full"
-                src="/images/video-wrap-small.png"
-                alt=""
-              />
-            </div>
-          </figure>
-          <div className="absolute bottom-0 right-0 -z-10">
             <img
-              src="images/circle@2x.png"
+              className="section-app-content-video-wrap"
+              src="/images/video-wrap.png"
               alt=""
-              className="ml-auto h-1/3 w-1/3"
             />
           </div>
-          <div className="absolute bottom-0 left-14 h-[3.5rem] w-[3rem]">
+          <div className="section-app-content-img">
             <img
-              src="images/arrow@2x.png"
+              className="section-app-content-img-body"
+              src="/gif/home-form.gif"
+            />
+            <img
+              className="section-app-content-img-wrap"
+              src="/images/video-wrap-small.png"
               alt=""
-              className="h-full w-full object-cover"
             />
           </div>
-        </aside>
+          <div className="section-app-content-circle">
+            <img src="images/circle@2x.png" alt="" />
+          </div>
+          <div className="section-app-content-arrow">
+            <img src="images/arrow@2x.png" alt="" />
+          </div>
+        </div>
       </div>
-      <div className="section-more relative w-full">
+      <div className="section-app section-app-reverse">
+        <div className="section-app-aside">
+          <div className="section-app-aside-caption">
+            <Slide left>
+              <h1>
+                <span className="section-app-aside-caption-highlight">
+                  “流程驱动”
+                </span>
+                <br />
+                灵活应对复杂业务
+              </h1>
+            </Slide>
+          </div>
+          <Slide right cascade big={false} delay={100}>
+            <ul className="section-app-aside-desc">
+              <li>
+                <IconFont
+                  className="section-app-aside-desc-icon"
+                  type="icon-checked"
+                />
+                <p className="text-sm font-light">
+                  可视化的流程配置，应对复杂组织与业务
+                </p>
+              </li>
+              <li>
+                <IconFont
+                  className="section-app-aside-desc-icon"
+                  type="icon-checked"
+                />
+                <p className="text-sm font-light">
+                  自动化任务，减少重复劳动，提升工作效率
+                </p>
+              </li>
+            </ul>
+          </Slide>
+          <a className="section-app-aside-link" href="#">
+            <span className="mr-3">即刻体验</span>
+            <IconFont
+              className="section-app-aside-link-icon"
+              type="icon-enter"
+            />
+          </a>
+        </div>
+        <div className="section-app-content">
+          <div className="section-app-content-video">
+            <video autoPlay loop preload="auto" muted playsInline>
+              <source src="/video/home-section1.mp4" type="video/mp4" />
+            </video>
+            <img
+              className="section-app-content-video-wrap"
+              src="/images/video-wrap.png"
+              alt=""
+            />
+          </div>
+          <div className="section-app-content-img">
+            <img
+              className="section-app-content-img-body"
+              src="/gif/home-process.gif"
+            />
+            <img
+              className="section-app-content-img-wrap"
+              src="/images/video-wrap-small.png"
+              alt=""
+            />
+          </div>
+          <div className="section-app-content-circle">
+            <img src="images/circle@2x.png" alt="" />
+          </div>
+          <div className="section-app-content-arrow">
+            <img src="images/arrow@2x.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div className="section-app">
+        <div className="section-app-aside">
+          <div className="section-app-aside-caption">
+            <Slide left>
+              <h1>
+                易连接
+                <br />
+                与现有系统
+                <span className="section-app-aside-caption-highlight">
+                  无缝对接
+                </span>
+              </h1>
+            </Slide>
+          </div>
+          <Slide right cascade big={false} delay={100}>
+            <ul className="section-app-aside-desc">
+              <li>
+                <IconFont
+                  className="section-app-aside-desc-icon"
+                  type="icon-checked"
+                />
+                <p className="text-sm font-light">
+                  通过连接器，打通企业内外的不同系统
+                </p>
+              </li>
+              <li>
+                <IconFont
+                  className="section-app-aside-desc-icon"
+                  type="icon-checked"
+                />
+                <p className="text-sm font-light">
+                  实现数据相互传输，打破数据孤岛
+                </p>
+              </li>
+            </ul>
+          </Slide>
+          <a className="section-app-aside-link" href="#">
+            <span className="mr-3">即刻体验</span>
+            <IconFont
+              className="section-app-aside-link-icon"
+              type="icon-enter"
+            />
+          </a>
+        </div>
+        <div className="section-app-content">
+          <div className="section-app-content-video">
+            <video autoPlay loop preload="auto" muted playsInline>
+              <source src="/video/home-section1.mp4" type="video/mp4" />
+            </video>
+            <img
+              className="section-app-content-video-wrap"
+              src="/images/video-wrap.png"
+              alt=""
+            />
+          </div>
+          <div className="section-app-content-img">
+            <img
+              className="section-app-content-img-body"
+              src="/gif/home-connect.gif"
+            />
+            <img
+              className="section-app-content-img-wrap"
+              src="/images/video-wrap-small.png"
+              alt=""
+            />
+          </div>
+          <div className="section-app-content-circle">
+            <img src="images/circle@2x.png" alt="" />
+          </div>
+          <div className="section-app-content-arrow">
+            <img src="images/arrow@2x.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div className="section-app section-app-reverse">
+        <div className="section-app-aside">
+          <div className="section-app-aside-caption">
+            <Slide left>
+              <h1>
+                <span className="section-app-aside-caption-highlight">
+                  “数据可视化”
+                </span>
+                <br />
+                业务状态一目了然
+              </h1>
+            </Slide>
+          </div>
+          <Slide right cascade big={false} delay={100}>
+            <ul className="section-app-aside-desc">
+              <li>
+                <IconFont
+                  className="section-app-aside-desc-icon"
+                  type="icon-checked"
+                />
+                <p className="text-sm font-light">
+                  多种报表类型，轻松拖拖拽组合
+                </p>
+              </li>
+              <li>
+                <IconFont
+                  className="section-app-aside-desc-icon"
+                  type="icon-checked"
+                />
+                <p className="text-sm font-light">
+                  数据驱动业务，为管理和决策提供可靠支持
+                </p>
+              </li>
+            </ul>
+          </Slide>
+          <a className="section-app-aside-link" href="#">
+            <span className="mr-3">即刻体验</span>
+            <IconFont
+              className="section-app-aside-link-icon"
+              type="icon-enter"
+            />
+          </a>
+        </div>
+        <div className="section-app-content">
+          <div className="section-app-content-video">
+            <video autoPlay loop preload="auto" muted playsInline>
+              <source src="/video/home-section1.mp4" type="video/mp4" />
+            </video>
+            <img
+              className="section-app-content-video-wrap"
+              src="/images/video-wrap.png"
+              alt=""
+            />
+          </div>
+          <div className="section-app-content-img">
+            <img
+              className="section-app-content-img-body"
+              src="/gif/home-graph.gif"
+            />
+            <img
+              className="section-app-content-img-wrap"
+              src="/images/video-wrap-small.png"
+              alt=""
+            />
+          </div>
+          <div className="section-app-content-circle">
+            <img src="images/circle@2x.png" alt="" />
+          </div>
+          <div className="section-app-content-arrow">
+            <img src="images/arrow@2x.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div className="section-more">
         <picture>
           <source media="(max-width: 750px)" srcSet="/images/more-small.jpg" />
           <source

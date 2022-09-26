@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const navigation = [
   {
@@ -12,21 +12,59 @@ const navigation = [
 ];
 
 const NavHeader = () => {
+  const headerRef = useRef<HTMLDivElement>(null);
+  const [collapsed, setCollapsed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!headerRef.current) {
+        return;
+      }
+      let scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+      if (scrollTop >= 70) {
+        headerRef.current.classList.add('header-white');
+      } else {
+        headerRef.current.classList.remove('header-white');
+      }
+    };
+
+    document.addEventListener('scroll', handleScroll);
+    return () => {
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleTouchStart = () => {
+    setCollapsed(!collapsed);
+  };
+
   return (
-    <div className="header">
+    <div className="header" ref={headerRef}>
       <div className="header-logo">
         <a href="/#">
           <img src="/images/logo.png" alt="logo" />
         </a>
       </div>
       <div className="header-content">
-        <nav className="header-content-nav">
+        <ul className="header-content-nav">
           {navigation.map((item) => (
             <li key={item.href} className="header-content-nav-item">
               <a href={item.href}>{item.title}</a>
             </li>
           ))}
-        </nav>
+        </ul>
+      </div>
+      <div className="header-content-dropmenu">
+        <ul className="header-content-dropmenu-nav">
+          {navigation.map((item) => (
+            <li key={item.href} className="header-content-dropmenu-nav-item">
+              <a href={item.href}>{item.title}</a>
+            </li>
+          ))}
+        </ul>
       </div>
       <div className="header-right">
         <a className="header-right-login" href="/#">
@@ -35,7 +73,7 @@ const NavHeader = () => {
         <a className="header-right-register" href="/#">
           注册
         </a>
-        <button className="header-right-menu">
+        <button className="header-right-menu" onTouchStart={handleTouchStart}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
