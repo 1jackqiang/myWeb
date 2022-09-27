@@ -1,4 +1,5 @@
 import '../styles/normalize.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.css';
 import '../styles/index.scss';
 

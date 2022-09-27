@@ -77,6 +77,13 @@
       }
     }
   }
+
+  &-record {
+    font-size: 0.27rem;
+    font-weight: 300;
+    color: #E6E6E6;
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -152,6 +159,11 @@
           text-align: center;
         }
       }
+    }
+
+    &-record {
+      text-align: center;
+      margin-top: 108px;
     }
   }
 }

@@ -76,10 +76,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p className="mt-8 text-xs text-gray-500 md:text-center">
-          &copy;2022
-          粤ICP备2022089886号|易搭云计算（深圳）有限公司版权所有2021-2022
-        </p>
       </div>
     </footer>
   );
@@ -122,15 +118,18 @@ const Footer2 = () => {
           </div>
           <div className="footer-about-code">
             <div className="footer-code-item">
-              <img src="/images/code.png" alt="公众号" />
+              <img src="/images/code.jpg" alt="公众号" />
               <p>易搭云公众号</p>
             </div>
             <div className="footer-code-item">
-              <img src="/images/code.png" alt="小程序" />
+              <img src="/images/applet.jpg" alt="小程序" />
               <p>易搭云小程序</p>
             </div>
           </div>
         </div>
+        <p className="footer-record">
+          粤ICP备2022089886号 | 易达云计算（深圳）有限公司版权所有2021-2022
+        </p>
       </div>
     </footer>
   );

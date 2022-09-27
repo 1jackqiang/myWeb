@@ -1,4 +1,3 @@
-import Image from 'next/image';
 // @ts-ignore
 import Fade from 'react-reveal/Fade';
 // @ts-ignore
@@ -9,31 +8,44 @@ import { IconFont } from '@/components/IconFont';
 const Home = () => {
   return (
     <>
-      <div className="home-banner z-0 h-screen w-full">
+      <div className="home-banner">
         <div className="home-banner-content">
-          <Fade bottom>
-            <h1 className="home-banner-content-title">零代码，易搭云</h1>
-          </Fade>
-          <Fade bottom delay={300}>
-            <h3 className="home-banner-content-desc">轻松搭建企业个性化系统</h3>
-          </Fade>
-          <Fade delay={600}>
-            <a className="home-banner-content-link" href="#">
-              <span>开始创建</span>
-              <IconFont type="icon-enter" />
-            </a>
-          </Fade>
+          <div className="container-md">
+            <Fade bottom>
+              <h1 className="home-banner-content-title">零代码，易搭云</h1>
+            </Fade>
+            <Fade bottom delay={300}>
+              <h3 className="home-banner-content-desc">
+                轻松搭建企业个性化系统
+              </h3>
+            </Fade>
+            <Fade delay={600}>
+              <a className="home-banner-content-link" href="#">
+                <span>开始创建</span>
+                <IconFont type="icon-enter" />
+              </a>
+            </Fade>
+          </div>
         </div>
+        <video
+          className="home-banner-video"
+          autoPlay
+          loop
+          preload="auto"
+          muted
+          playsInline
+        >
+          <source src="/video/home-banner.mp4" type="video/mp4" />
+        </video>
       </div>
-      <div className="section-app">
+      <div className="section-app container-md">
         <div className="section-app-aside">
           <div className="section-app-aside-caption">
             <Slide left>
               <h1>
                 <span className="section-app-aside-caption-highlight">
-                  “零”
+                  零基础小白
                 </span>
-                基础小白
                 <br />
                 也能搭建业务应用
               </h1>
@@ -72,7 +84,7 @@ const Home = () => {
         <div className="section-app-content">
           <div className="section-app-content-video">
             <video autoPlay loop preload="auto" muted playsInline>
-              <source src="/video/home-app.mp4" type="video/mp4" />
+              <source src="/video/home-form.mp4" type="video/mp4" />
             </video>
             <img
               className="section-app-content-video-wrap"
@@ -99,13 +111,13 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="section-app section-app-reverse">
+      <div className="section-app section-app-reverse container-md">
         <div className="section-app-aside">
           <div className="section-app-aside-caption">
             <Slide left>
               <h1>
                 <span className="section-app-aside-caption-highlight">
-                  “流程驱动”
+                  流程驱动
                 </span>
                 <br />
                 灵活应对复杂业务
@@ -145,7 +157,7 @@ const Home = () => {
         <div className="section-app-content">
           <div className="section-app-content-video">
             <video autoPlay loop preload="auto" muted playsInline>
-              <source src="/video/home-section1.mp4" type="video/mp4" />
+              <source src="/video/home-process.mp4" type="video/mp4" />
             </video>
             <img
               className="section-app-content-video-wrap"
@@ -169,7 +181,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="section-app">
+      <div className="section-app container-md">
         <div className="section-app-aside">
           <div className="section-app-aside-caption">
             <Slide left>
@@ -216,7 +228,7 @@ const Home = () => {
         <div className="section-app-content">
           <div className="section-app-content-video">
             <video autoPlay loop preload="auto" muted playsInline>
-              <source src="/video/home-section1.mp4" type="video/mp4" />
+              <source src="/video/home-connect.mp4" type="video/mp4" />
             </video>
             <img
               className="section-app-content-video-wrap"
@@ -240,13 +252,13 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="section-app section-app-reverse">
+      <div className="section-app section-app-reverse container-md">
         <div className="section-app-aside">
           <div className="section-app-aside-caption">
             <Slide left>
               <h1>
                 <span className="section-app-aside-caption-highlight">
-                  “数据可视化”
+                  数据可视化
                 </span>
                 <br />
                 业务状态一目了然
@@ -286,7 +298,7 @@ const Home = () => {
         <div className="section-app-content">
           <div className="section-app-content-video">
             <video autoPlay loop preload="auto" muted playsInline>
-              <source src="/video/home-section1.mp4" type="video/mp4" />
+              <source src="/video/home-graph.mp4" type="video/mp4" />
             </video>
             <img
               className="section-app-content-video-wrap"
@@ -313,7 +325,7 @@ const Home = () => {
       <div className="section-template">
         <picture>
           <source
-            media="(max-width: 750px)"
+            media="(max-width: 768px)"
             srcSet="/images/template-small.jpg"
           />
           <source
@@ -327,7 +339,7 @@ const Home = () => {
             loading="lazy"
           />
         </picture>
-        <div className="section-template-content">
+        <div className="section-template-content container-md">
           <h1>丰富模板，懂你所需</h1>
           <a className="section-template-link" href="#">
             一键启用
@@ -336,7 +348,7 @@ const Home = () => {
       </div>
       <div className="section-more">
         <picture>
-          <source media="(max-width: 750px)" srcSet="/images/more-small.jpg" />
+          <source media="(max-width: 768px)" srcSet="/images/more-small.jpg" />
           <source
             media="(max-width: 1280px)"
             srcSet="/images/more-medium.jpg"

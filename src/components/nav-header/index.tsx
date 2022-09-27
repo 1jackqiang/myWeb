@@ -1,6 +1,8 @@
 import cls from 'classnames';
 import React, { useEffect, useRef, useState } from 'react';
 
+import { IconFont } from '@/components/IconFont';
+
 const navigation = [
   {
     title: '模板中心',
@@ -26,9 +28,9 @@ const NavHeader = () => {
         document.documentElement.scrollTop ||
         document.body.scrollTop;
       if (scrollTop >= 70) {
-        headerRef.current.classList.add('header-white');
+        headerRef.current.classList.add('header-scroll');
       } else {
-        headerRef.current.classList.remove('header-white');
+        headerRef.current.classList.remove('header-scroll');
       }
     };
 
@@ -38,7 +40,7 @@ const NavHeader = () => {
     };
   }, []);
 
-  const handleTouchStart = () => {
+  const handleCollapsed = () => {
     setCollapsed(!collapsed);
   };
 
@@ -78,20 +80,12 @@ const NavHeader = () => {
         <a className="header-right-register" href="/#">
           注册
         </a>
-        <button className="header-right-menu" onTouchStart={handleTouchStart}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="1"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
+        <button className="header-right-menu" onTouchStart={handleCollapsed}>
+          {collapsed ? (
+            <IconFont type="icon-close" />
+          ) : (
+            <IconFont type="icon-paixu1" />
+          )}
         </button>
       </div>
     </div>
