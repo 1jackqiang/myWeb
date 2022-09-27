@@ -5,12 +5,16 @@ import { IconFont } from '@/components/IconFont';
 
 const navigation = [
   {
+    title: '首页',
+    href: '/',
+  },
+  {
     title: '模板中心',
-    href: '#',
+    href: 'https://www.yidayun.com/app-market',
   },
   {
     title: '云生集团',
-    href: '#',
+    href: 'http://www.ysinc.com/',
   },
 ];
 
@@ -74,10 +78,13 @@ const NavHeader = () => {
         </ul>
       </div>
       <div className="header-right">
-        <a className="header-right-login" href="/#">
+        <a className="header-right-login" href="https://yidayun.com/login">
           登录
         </a>
-        <a className="header-right-register" href="/#">
+        <a
+          className="header-right-register"
+          href="https://yidayun.com/register"
+        >
           注册
         </a>
         <button className="header-right-menu" onTouchStart={handleCollapsed}>

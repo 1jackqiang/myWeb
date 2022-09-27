@@ -44,8 +44,10 @@
           font-weight: 400;
           color: #e6e6e6;
           font-size: 0.35rem;
+          list-style: none;
 
-          a {
+          a,
+          li {
             color: #e6e6e6;
             text-underline: none;
           }
@@ -127,7 +129,8 @@
             color: #e6e6e6;
             font-size: 14px;
 
-            a {
+            a,
+            li {
               color: #e6e6e6;
               text-underline: none;
             }
@@ -181,6 +184,10 @@
       grid-template-columns: auto minmax(0, 1fr) auto;
       justify-content: space-around;
       gap: 118px;
+
+      &-content {
+        justify-items: end;
+      }
     }
   }
 }

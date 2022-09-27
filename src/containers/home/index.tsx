@@ -9,6 +9,16 @@ const Home = () => {
   return (
     <>
       <div className="home-banner">
+        <video
+          className="home-banner-video"
+          autoPlay
+          loop
+          preload="auto"
+          muted
+          playsInline
+        >
+          <source src="/video/home-banner.mp4" type="video/mp4" />
+        </video>
         <div className="home-banner-content">
           <div className="container-md">
             <Fade bottom>
@@ -27,16 +37,6 @@ const Home = () => {
             </Fade>
           </div>
         </div>
-        <video
-          className="home-banner-video"
-          autoPlay
-          loop
-          preload="auto"
-          muted
-          playsInline
-        >
-          <source src="/video/home-banner.mp4" type="video/mp4" />
-        </video>
       </div>
       <div className="section-app container-md">
         <div className="section-app-aside">
@@ -68,7 +68,7 @@ const Home = () => {
                   type="icon-checked"
                 />
                 <p className="text-sm font-light">
-                  丰富的字段类型，拖拉拽的操作方式
+                  即使不懂代码，也能快速实现奇思妙想
                 </p>
               </li>
             </ul>
@@ -89,25 +89,26 @@ const Home = () => {
             <img
               className="section-app-content-video-wrap"
               src="/images/video-wrap.png"
-              alt=""
+              alt="background-wrap"
             />
           </div>
           <div className="section-app-content-img">
             <img
               className="section-app-content-img-body"
               src="/gif/home-form.gif"
+              alt="设计器"
             />
             <img
               className="section-app-content-img-wrap"
               src="/images/video-wrap-small.png"
-              alt=""
+              alt="background-wrap"
             />
           </div>
           <div className="section-app-content-background">
-            <img src="images/circle@2x.png" alt="" />
+            <img src="images/circle@2x.png" alt="background-wrap" />
           </div>
           <div className="section-app-content-arrow">
-            <img src="images/arrow@2x.png" alt="" />
+            <img src="images/arrow@2x.png" alt="background-wrap" />
           </div>
         </div>
       </div>
@@ -162,22 +163,23 @@ const Home = () => {
             <img
               className="section-app-content-video-wrap"
               src="/images/video-wrap.png"
-              alt=""
+              alt="background-wrap"
             />
           </div>
           <div className="section-app-content-img">
             <img
               className="section-app-content-img-body"
               src="/gif/home-process.gif"
+              alt="流程中心"
             />
             <img
               className="section-app-content-img-wrap"
               src="/images/video-wrap-small.png"
-              alt=""
+              alt="background-wrap"
             />
           </div>
           <div className="section-app-content-background section-app-content-background-topleft">
-            <img src="images/triangle-medium.png" alt="" />
+            <img src="images/triangle-medium.png" alt="background-wrap" />
           </div>
         </div>
       </div>
@@ -233,22 +235,23 @@ const Home = () => {
             <img
               className="section-app-content-video-wrap"
               src="/images/video-wrap.png"
-              alt=""
+              alt="background-wrap"
             />
           </div>
           <div className="section-app-content-img">
             <img
               className="section-app-content-img-body"
               src="/gif/home-connect.gif"
+              alt="连接器"
             />
             <img
               className="section-app-content-img-wrap"
               src="/images/video-wrap-small.png"
-              alt=""
+              alt="background-wrap"
             />
           </div>
           <div className="section-app-content-background">
-            <img src="images/rect-medium.png" alt="" />
+            <img src="images/rect-medium.png" alt="background-wrap" />
           </div>
         </div>
       </div>
@@ -303,22 +306,23 @@ const Home = () => {
             <img
               className="section-app-content-video-wrap"
               src="/images/video-wrap.png"
-              alt=""
+              alt="background-wrap"
             />
           </div>
           <div className="section-app-content-img">
             <img
               className="section-app-content-img-body"
               src="/gif/home-graph.gif"
+              alt="报表"
             />
             <img
               className="section-app-content-img-wrap"
               src="/images/video-wrap-small.png"
-              alt=""
+              alt="background-wrap"
             />
           </div>
           <div className="section-app-content-background section-app-content-background-leftbottom">
-            <img src="images/bulb-medium.png" alt="" />
+            <img src="images/bulb-medium.png" alt="background-wrap" />
           </div>
         </div>
       </div>
@@ -335,7 +339,7 @@ const Home = () => {
           <img
             className="section-template-background"
             src="/images/template-large.jpg"
-            alt="more"
+            alt="模板"
             loading="lazy"
           />
         </picture>
@@ -362,7 +366,7 @@ const Home = () => {
         </picture>
         <div className="section-more-content">
           <h1>
-            <img src="/images/brand@2x.png" alt="" />
+            <img src="/images/brand@2x.png" alt="更多" />
             更多的奇妙想法正在实现
           </h1>
           <a className="section-more-link" href="#">

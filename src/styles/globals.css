@@ -13,3 +13,8 @@ picture {
   font-size: 0;
   display: block;
 }
+
+:root {
+  --bs-link-color: #247fff;
+  --bs-link-hover-color: #247fff;
+}
