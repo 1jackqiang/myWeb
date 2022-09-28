@@ -33,7 +33,7 @@ RUN yarn export
 # RUN npm run build
 
 # Production image, copy all the files and run next
-FROM node:16-alpine AS runner
+FROM nginx:latest AS runner
 RUN mkdir app
 WORKDIR /app
 
@@ -43,3 +43,5 @@ COPY --from=builder /app/dist ./dist
 # 用本地的 default.conf 配置来替换 nginx 镜像里的默认配置
 COPY docker/default.conf /etc/nginx/conf.d/default.conf
 RUN ls -la dist/
+
+EXPOSE 80 3000
