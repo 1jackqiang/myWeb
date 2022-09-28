@@ -1,4 +1,5 @@
 import cls from 'classnames';
+import { useRouter } from 'next/router';
 import React, { useEffect, useRef, useState } from 'react';
 
 import { IconFont } from '@/components/IconFont';
@@ -19,6 +20,7 @@ const navigation = [
 ];
 
 const NavHeader = () => {
+  const router = useRouter();
   const headerRef = useRef<HTMLDivElement>(null);
   const [collapsed, setCollapsed] = useState(false);
 
@@ -58,7 +60,12 @@ const NavHeader = () => {
       <div className="header-content">
         <ul className="header-content-nav">
           {navigation.map((item) => (
-            <li key={item.href} className="header-content-nav-item">
+            <li
+              key={item.href}
+              className={cls('header-content-nav-item', {
+                active: router.pathname === item.href,
+              })}
+            >
               <a href={item.href}>{item.title}</a>
             </li>
           ))}

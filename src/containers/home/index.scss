@@ -1,19 +1,42 @@
 .home-banner {
   width: 100%;
-  height: 100vh;
   background-size: 100%;
   object-fit: cover;
   position: relative;
+  padding-top: 70px;
 
-  &-video {
+  &-pc {
+    position: relative;
     width: 100%;
-    object-fit: cover;
-    height: 100%;
+    height: 640px;
+    overflow: hidden;
+
+    &-banner {
+      position: absolute;
+      height: 100%;
+      left: 50%;
+      pointer-events: none;
+      top: 0;
+      transform: translate3d(-50%, 0, 0);
+      -webkit-transform: translate3d(-50%, 0, 0);
+      -webkit-transition: opacity 0.2s linear;
+      width: auto;
+    }
+
+    &-breathe {
+      position: absolute;
+      border-radius: 82px;
+      left: calc(50% + 250px);
+      top: calc(50% - 180px);
+      width: 182px;
+      height: 240px;
+      transform: scale(0.8);
+    }
   }
 
   &-content {
     position: absolute;
-    top: 50%;
+    top: 300px;
     left: 0;
     right: 0;
     transform: translateY(-50%);
@@ -87,7 +110,7 @@
       }
 
       &-highlight {
-        color: #247fff;
+        color: var(--primary-color);
       }
     }
 
@@ -118,7 +141,7 @@
 
     &-link {
       margin-top: 42px;
-      background: #247fff;
+      background: var(--primary-color);
       border: 1px solid rgba(255, 255, 255, 0.18);
       box-shadow: -15px -13px 29px 0px #fff;
       padding: 17px 37px;
@@ -153,7 +176,7 @@
       width: 100%;
       height: 100%;
       position: relative;
-      padding: 19px;
+      padding: 20px;
       -webkit-filter: brightness(100%);
 
       video {
@@ -296,12 +319,12 @@
   .home-banner {
     width: 100%;
     height: 17.78666rem;
-    background: url('/images/home-banner.jpg') no-repeat;
+    background: url('/images/banner-mb.png') no-repeat;
     background-size: 100%;
     object-fit: cover;
     position: relative;
 
-    &-video {
+    &-pc {
       display: none;
     }
 
@@ -335,7 +358,7 @@
         border: 0.01px solid rgba(255, 255, 255, 0.18);
         box-shadow: 0rem 0rem 0rem 0rem #ffffff;
         padding: 0.28rem 0.87rem;
-        color: #247fff;
+        color: var(--primary-color);
         font-size: 0.32rem;
 
         .anticon {
@@ -403,7 +426,7 @@
 
       &-link {
         margin-top: 0.55rem;
-        background: #247fff;
+        background: var(--primary-color);
         border: 0.01px solid rgba(255, 255, 255, 0.18);
         box-shadow: 0rem 0rem 0rem 0rem #ffffff;
         border-radius: 0.08rem;
@@ -522,7 +545,6 @@
 
 @media screen and (max-width: 768px) {
   .section-template {
-
     h1 {
       font-size: 0.48rem;
       font-weight: 400;

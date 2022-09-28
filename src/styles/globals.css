@@ -17,4 +17,5 @@ picture {
 :root {
   --bs-link-color: #247fff;
   --bs-link-hover-color: #247fff;
+  --primary-color: #247fff;
 }

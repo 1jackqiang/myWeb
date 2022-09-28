@@ -1,3 +1,5 @@
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
 // @ts-ignore
 import Fade from 'react-reveal/Fade';
 // @ts-ignore
@@ -5,20 +7,31 @@ import Slide from 'react-reveal/Slide';
 
 import { IconFont } from '@/components/IconFont';
 
+const SplineComponentWithNoSSR = dynamic(
+  () => import('@splinetool/react-spline'),
+  { ssr: false },
+);
+
 const Home = () => {
   return (
     <>
       <div className="home-banner">
-        <video
-          className="home-banner-video"
-          autoPlay
-          loop
-          preload="auto"
-          muted
-          playsInline
-        >
-          <source src="/video/home-banner.mp4" type="video/mp4" />
-        </video>
+        <div className="home-banner-pc">
+          <img
+            className="home-banner-pc-banner"
+            src="/images/banner.png"
+            alt="banner"
+          />
+          <img
+            className="home-banner-pc-breathe"
+            draggable={false}
+            src="/images/heartbeat.gif"
+            alt="heartbeat"
+          />
+          {/*<Suspense>
+            <SplineComponentWithNoSSR className="home-banner-pc-canvas" scene="/banner.spline" />
+          </Suspense>*/}
+        </div>
         <div className="home-banner-content">
           <div className="container-md">
             <Fade bottom>
