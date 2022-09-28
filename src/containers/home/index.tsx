@@ -43,7 +43,10 @@ const Home = () => {
               </h3>
             </Fade>
             <Fade delay={600}>
-              <a className="home-banner-content-link" href="#">
+              <a
+                className="home-banner-content-link"
+                href="https://yidayun.com/login"
+              >
                 <span>开始创建</span>
                 <IconFont type="icon-enter" />
               </a>
@@ -86,7 +89,10 @@ const Home = () => {
               </li>
             </ul>
           </Slide>
-          <a className="section-app-aside-link" href="#">
+          <a
+            className="section-app-aside-link"
+            href="https://yidayun.com/login"
+          >
             <span className="mr-3">即刻体验</span>
             <IconFont
               className="section-app-aside-link-icon"
@@ -160,7 +166,10 @@ const Home = () => {
               </li>
             </ul>
           </Slide>
-          <a className="section-app-aside-link" href="#">
+          <a
+            className="section-app-aside-link"
+            href="https://yidayun.com/login"
+          >
             <span className="mr-3">即刻体验</span>
             <IconFont
               className="section-app-aside-link-icon"
@@ -232,7 +241,10 @@ const Home = () => {
               </li>
             </ul>
           </Slide>
-          <a className="section-app-aside-link" href="#">
+          <a
+            className="section-app-aside-link"
+            href="https://yidayun.com/login"
+          >
             <span className="mr-3">即刻体验</span>
             <IconFont
               className="section-app-aside-link-icon"
@@ -303,7 +315,10 @@ const Home = () => {
               </li>
             </ul>
           </Slide>
-          <a className="section-app-aside-link" href="#">
+          <a
+            className="section-app-aside-link"
+            href="https://yidayun.com/login"
+          >
             <span className="mr-3">即刻体验</span>
             <IconFont
               className="section-app-aside-link-icon"
@@ -358,7 +373,10 @@ const Home = () => {
         </picture>
         <div className="section-template-content container-md">
           <h1>丰富模板，懂你所需</h1>
-          <a className="section-template-link" href="#">
+          <a
+            className="section-template-link"
+            href="https://www.yidayun.com/app-market"
+          >
             一键启用
           </a>
         </div>

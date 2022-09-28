@@ -88,10 +88,7 @@ const NavHeader = () => {
         <a className="header-right-login" href="https://yidayun.com/login">
           登录
         </a>
-        <a
-          className="header-right-register"
-          href="https://yidayun.com/register"
-        >
+        <a className="header-right-register" href="https://yidayun.com/login">
           注册
         </a>
         <button className="header-right-menu" onTouchStart={handleCollapsed}>

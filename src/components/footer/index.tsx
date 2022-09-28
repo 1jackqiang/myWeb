@@ -10,21 +10,53 @@ const Footer = () => {
             <div className="footer-about-content-item">
               <p>支持</p>
               <nav>
-                <a href="https://support.qq.com/products/409299/faqs-more/">
+                <a
+                  href="https://support.qq.com/products/409299/faqs-more/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   常见问题
                 </a>
-                <a href="https://docs.qq.com/doc/p/52524cba967f3f15774156586f28fee7f2d7961b?dver=3.0.0">
+                <a
+                  href="https://docs.qq.com/doc/p/52524cba967f3f15774156586f28fee7f2d7961b?dver=3.0.0"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   帮助中心
                 </a>
-                <a href="https://support.qq.com/products/409299/">交流社区</a>
+                <a
+                  href="https://support.qq.com/products/409299/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  交流社区
+                </a>
               </nav>
             </div>
             <div className="footer-about-content-item">
               <p>关于我们</p>
               <nav>
-                <a href="http://www.ysinc.com/about?types=profile">公司简介</a>
-                <a href="http://www.ysinc.com/about?types=history">公司历程</a>
-                <a href="http://www.ysinc.com/about?types=honor">公司荣誉</a>
+                <a
+                  href="http://www.ysinc.com/about?types=profile"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  公司简介
+                </a>
+                <a
+                  href="http://www.ysinc.com/about?types=history"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  公司历程
+                </a>
+                <a
+                  href="http://www.ysinc.com/about?types=honor"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  公司荣誉
+                </a>
               </nav>
             </div>
             <div className="footer-about-content-item footer-about-content-item-contact">
